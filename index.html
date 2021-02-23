@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Java Junior</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <!favicon or favourite icon - ikonka vlavo hore pri zobrazeni web stranky>
+    <!Da sa vytvorit alebo stiahnut zo https://www.favicon.cc />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@100&family=Sacramento&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <! div (content division) element umozni rozdelit body, t.j. vytvorit strukturu stranky>
+    <div class="top-container">
+      <img class="top-cloud" src="images/cloud.png" alt="cloud-img">
+      <h1>I'm Java Junior.</h1>
+      <! Ak chcem block element rozdelit (napr. kvoli stylingu), mozem pouzit prikaz span>
+        <h2>a new <span class = "pro">pro</span>grammer.</h2>
+      <img class="bottom-cloud" src="images/cloud.png" alt="cloud-img">
+      <img src="images/mountain.png" alt="mountain-img">
+    </div>
+
+    <! Existuju tzv. block display elements, ktore zabraju celu sirku obrazovky>
+    <! Ide o h1-h6, p, div, lists ...>
+    <! Inline display elements zaberaju len svoju vlastnu vysku a sirku a vedla nich moze byt iny element>
+    <! Su to napr. images, spans - nizsie alebo anchor tags>
+    <! Inline elements su flexibilnejsie ako block. Maju vsak nevyhodu, ze nie je mozne nastavit ich sirku>
+
+    <! Je tiez mozne block element nastavit ako inline pomocou prikazu display: inline a naopak - display: block>
+    <! Po zmene ma element vlastnosti zmeneneho typu.>
+    <! Kazdy typ elementu je mozne zmenit aj na typ display inline-block. Vtedy o viem nastavit sirku a aj dat viac elementov za sebou>
+    <! Stvrty typ display elementu je none. Vtedy element nie je na stranke vobec vidno.>
+    <! Obdobne sa da pouzit prikaz visibility: hidden. Tiez element nevidno, ale na rozdiel od none, zostaneme po nom prazdne miesto>
+
+
+    <div class="middle-container">
+      <div class="profile">
+        <img class="me" src="images/meetoo.jpg" alt="me">
+        <h2>Hello.</h2>
+        <p>I am a model active at Instagram and who has just started to learn programming in Java. I ❤️ to meet nice and clever people who would like to work together. </p>
+      </div>
+      <hr>
+      <div class="skills">
+        <h2>My Skills.</h2>
+        <div class="skill-row">
+          <img class="logo" src="images/java-logo.png" alt="programmer">
+          <h3>Java Junior</h3>
+          <p>Java Junior for various project at F4S.</p>
+          <p class="logo-description">For our clients, we have developed and implemented complex information systems and specialized sub-systems covering a wide range of activities and requirements of companies operating in the financial markets. Our clients include banks, insurance companies, securities dealers, investment fund managers and financial brokers.</p>
+        </div>
+        <div class="skill-row">
+          <h3>To look awesome</h3>
+          <img class="insta" src="https://media1.giphy.com/media/ViOGU4nWadxGccxbG3/200w.webp?cid=ecf05e47prpq9zo6mbdqgab1v64aogx1j75zgxfkajn9uisz&rid=200w.webp" alt="influencer">
+          <p>Model and succesfull influencer at Instagram.</p>
+          <p>Instagram is a highly visual social media channel, and therefore is in many ways the perfect medium for brands to tell their tale. All they need to do is to ensure that people actually see their Instagram images.</p>
+        </div>
+      </div>
+      <hr>
+      <div>
+        <h2>Get In Touch</h2>
+        <h3>I love nice and clever people.</h3>
+        <p class="contact-me">If you like programming in Java or have some new idea or project we could cooperate!</p>
+        <br>
+        <a href="mailto:javajunior64@gmail.com" class="button-contact">CONTACT ME</a>
+      </div>
+    </div>
+
+
+    <div class="bottom-container">
+      <a class="footer-link" href="https://www.instagram.com/lanarhoades/">Instagram</a>
+      <a class="footer-link" href="https://twitter.com/">Twitter</a>
+      <a class="footer-link" href="https://www.f4s.eu/">Website</a>
+      <p class="copyright">© 2021 Lana Java Junior</p>
+    </div>
+
+
+
+
+</body>
+
+</html>

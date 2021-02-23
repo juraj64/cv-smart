@@ -1,0 +1,202 @@
+body {
+  margin: 0; /* nastavime velkost marginu okolo celeho body */
+  text-align: center; /* a cele vycentrujeme */
+  /*font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+   kvoli kompatibilite (pozri tiez nizsie) sa dava aj takato skupina fontov - fallback
+  Ide od lava do prava a da, co najde skor. Mne vsak zda sa funguje len Arial alebo Times New Roman.
+  nakoniec sme vybrali fonty z https://fonts.google.com */
+  font-family: 'Merriweather', serif;
+  font-size: 100%;
+  color: #40514E
+
+}
+
+/* Fonty pisma a farby sa volia casto na zaciatku pisania stranky.
+   Fonty aj preto, lebo ich velkost ovplyvnuje aj ine elementy.
+   Realne pouzivane fonty sa delia na dve skupiny Serif (default Times New Roman)
+   a Sans-serif (default Arial) - https://www.w3schools.com/css/css_font.asp
+   Defaultne je nastaveny Serif.
+   Typ pisma je mozne samozrejme dalej upravit v ramci skupiny.
+
+   Niektore fonty nemusia na kazdom browseri a systeme vyzerat rovnako.
+   Preto existuju tzv. web-safe fonts - https://www.w3schools.com/cssref/css_websafe_fonts.asp.
+   Ani tie vsak nemusia fungovat na 100% - https://www.cssfontstack.com/. Cez toto najdem aj fallback pre font.
+
+   Ak nefunguju fallbacks, tak sa da este pouzit font embedding pomocou stranky - https://fonts.google.com/.
+   Vybrane fonty su v index.html
+
+*/
+
+h1 {
+  /* hranica od vrchu este specialne,lebo h1 ma implicitne nejaku nastavenu a my chceme 0
+  Dovod je, lebo to chceme neskor cele vycentrovat */
+  margin: 50px auto 50px auto; /* top right bottom left .
+                            podrobnosti - https://developer.mozilla.org/en-US/docs/Web/CSS/margin */
+  font-size: 5.625rem;
+  /* Dynamicke nastavenie 100% = 16px. 90px = 562.5%. Ma vyznam, ked zmenim velkost pisma v nastaveniach browsera
+     Pre dynamicke nastavenie sa tiez sa pouziva tzv. em, kde 1em = 100% = 16px, t.j. 90px = 5.625em
+     Tu moze vzninut problem, ked nastavime v body dynamicku velkost, napr. 2em, potom tu to znaci vlastne 2 x 5.625 em
+     Z tohto dovodu sa pouziva v novsej verzii CSS rem, kde ide len o dynamiku k browseru a nie k body.
+  */
+  font-family: 'Sacramento', cursive;
+  color: #66BFBF;
+}
+
+h2 {
+font-family: 'Montserrat', sans-serif;
+font-size: 2rem;
+color: #66BFBF;
+font-weight: bold;
+padding-bottom: 10px;
+}
+
+h3 {
+font-family: 'Montserrat', sans-serif;
+color: #11999E;
+}
+
+p {
+  line-height: 2; /* riadkovanie. Default je 1 */
+
+}
+
+hr {
+  border: dotted #EAF6F6 6px;
+  border-bottom: none;
+  width: 4%;
+  margin: 100px auto;
+}
+
+a {
+  color: #11999E;
+  font-family: 'Montserrat', sans-serif bold;
+  margin: 10px 20px;
+  text-decoration: none; /* nie podciarknute */
+}
+
+/* hover - meni farby pri dotyku kurzora */
+a:hover {
+  color: #EAF6F6;
+}
+
+.top-container {
+  background-color: #E4F9F5;
+  position: relative;
+  padding-top: 100px;
+}
+
+.middle-container {
+  margin: 100px auto
+}
+
+.bottom-container {
+  background-color: #66BFBF;
+  padding: 50px 0 20px; /* tymto vieme zvacsit sirku aj zarovnat to uplne nadol
+                        (preco mi nie je az tak jasne) */
+}
+
+.pro {
+  text-decoration:underline /* podciarknuty text*/
+}
+
+.top-cloud {
+  position: absolute;
+  top: 40px;
+  right: 250px;
+}
+
+.bottom-cloud {
+  position: absolute;
+  bottom: 250px;
+  left: 250px;
+}
+
+.profile {
+  width: 33%;  /* len polovicna sirka strany */
+  margin: auto; /* tymto to napravo a nalavo vycentrujeme */
+}
+
+.me {
+  width: 50%;   /* uprava velkosti obrazku */
+  border-radius: 50%; /* vytvorenie okruhleho obrazku */
+}
+
+.skill-row {
+  width: 50%;  /* len polovicna sirka strany */
+  margin: 100px auto 100px auto; /* tymto to napravo a nalavo vycentrujeme */
+  text-align: left;
+}
+
+.contact-me {
+    width: 40%;
+    margin: 40px auto 60px auto; /* tymto to napravo a nalavo vycentrujeme */
+}
+
+.copyright {
+  color: #EAF6F6;
+  font-size: 0.9rem;
+  padding: 20px 0;
+}
+
+
+.logo {
+  float: left;  /* text obtecie obrazok a to vlavo
+  Doporucuje float pouzit iba vtedy, ked naozaj chcem nieco obtiect textom.
+  Na poziciovanie vo vseobecnosti radsej margin, position, padding a pod. */
+  margin-right: 30px; /* margin vpravo medzi obrazkom a textom */
+}
+
+/* Tymto by sme zas zrusili obtecenie vyssie pre tento class (text)
+  Je to vlastne taky anti-float. Len na cvicnu ukazku, lebo to vlastne nechceme.
+.logo-description {
+  clear: left;
+}
+*/
+
+.insta {
+  float: right;
+  margin-left: 30px;
+}
+
+/* Button sa vytvori pomocou https://cssbuttoncreator.com/# */
+.button-contact {
+   background: #11CDD4;
+   background-image: -webkit-linear-gradient(top, #11CDD4, #11999E);
+   background-image: -moz-linear-gradient(top, #11CDD4, #11999E);
+   background-image: -ms-linear-gradient(top, #11CDD4, #11999E);
+   background-image: -o-linear-gradient(top, #11CDD4, #11999E);
+   background-image: -webkit-gradient(to bottom, #11CDD4, #11999E);
+   -webkit-border-radius: 9px;
+   -moz-border-radius: 9px;
+   border-radius: 9px;
+   height: 11px;
+   line-height: 11px;
+   color: #FFFFFF;
+   font-family: 'Montserrat', sans-serif;
+   width: 185px;
+   font-size: 20px;
+   font-weight: 900;
+   padding: 12px;
+   -webkit-box-shadow: 1px 1px 6px 0 #000000;
+   -moz-box-shadow: 1px 1px 6px 0 #000000;
+   box-shadow: 1px 1px 6px 0 #000000;
+   text-shadow: 1px 1px 6px #000000;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   text-align: center;
+}
+
+.button-contact:hover {
+   border: solid #ED3333 1px;
+   background: #3DE3CB;
+   background-image: -webkit-linear-gradient(top, #3DE3CB, #2BC4AD);
+   background-image: -moz-linear-gradient(top, #3DE3CB, #2BC4AD);
+   background-image: -ms-linear-gradient(top, #3DE3CB, #2BC4AD);
+   background-image: -o-linear-gradient(top, #3DE3CB, #2BC4AD);
+   background-image: -webkit-gradient(to bottom, #3DE3CB, #2BC4AD);
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   text-decoration: none;
+}
